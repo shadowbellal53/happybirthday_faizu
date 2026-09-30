@@ -1,0 +1,4057 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>শুভ জন্মদিন, ফাইজু ❤️</title>
+
+<style>
+
+:root{
+  --bg:#08040d;
+  --bg2:#19091f;
+  --card:rgba(255,255,255,.075);
+  --card2:rgba(255,255,255,.12);
+  --border:rgba(255,255,255,.15);
+  --text:#fff8fc;
+  --muted:#d8c7d4;
+  --pink:#ff5fa8;
+  --pink2:#ffafd0;
+  --gold:#ffd98a;
+  --purple:#b58cff;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  min-height:100vh;
+  color:var(--text);
+  font-family:Arial,"Noto Sans Bengali",sans-serif;
+
+  background:
+    radial-gradient(circle at 15% 10%,rgba(255,60,150,.22),transparent 30%),
+    radial-gradient(circle at 85% 20%,rgba(180,80,255,.20),transparent 30%),
+    radial-gradient(circle at 50% 80%,rgba(255,130,170,.10),transparent 35%),
+    linear-gradient(135deg,var(--bg),var(--bg2));
+
+  overflow-x:hidden;
+}
+
+button{
+  font:inherit;
+}
+
+.hidden{
+  display:none!important;
+}
+
+
+/* =========================
+   BACKGROUND
+========================= */
+
+.background-hearts{
+  position:fixed;
+  inset:0;
+  overflow:hidden;
+  pointer-events:none;
+  z-index:0;
+}
+
+.floating-heart{
+  position:absolute;
+  bottom:-60px;
+  color:var(--pink);
+  opacity:.22;
+  animation:floatUp linear infinite;
+}
+
+@keyframes floatUp{
+  0%{
+    transform:translateY(0) rotate(0) scale(.8);
+    opacity:0;
+  }
+
+  15%{
+    opacity:.25;
+  }
+
+  100%{
+    transform:translateY(-115vh) rotate(360deg) scale(1.2);
+    opacity:0;
+  }
+}
+
+
+/* =========================
+   NAV
+========================= */
+
+.nav{
+  position:fixed;
+  top:15px;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:100;
+
+  display:flex;
+  gap:6px;
+  padding:7px;
+
+  background:rgba(15,6,22,.72);
+  border:1px solid var(--border);
+  border-radius:999px;
+
+  backdrop-filter:blur(18px);
+
+  box-shadow:0 12px 40px rgba(0,0,0,.25);
+}
+
+.nav button{
+  border:0;
+  background:transparent;
+  color:#d9cbd6;
+
+  padding:9px 14px;
+  border-radius:999px;
+
+  cursor:pointer;
+  font-size:12px;
+
+  transition:.25s;
+}
+
+.nav button:hover{
+  color:white;
+  background:rgba(255,255,255,.10);
+}
+
+
+/* =========================
+   MUSIC
+========================= */
+
+.music-player{
+  position:fixed;
+  right:15px;
+  bottom:15px;
+  z-index:101;
+
+  display:flex;
+  align-items:center;
+  gap:8px;
+
+  padding:8px;
+
+  background:rgba(20,8,28,.78);
+  border:1px solid var(--border);
+  border-radius:999px;
+
+  backdrop-filter:blur(15px);
+}
+
+.music-button{
+  width:42px;
+  height:42px;
+
+  border:0;
+  border-radius:50%;
+
+  color:white;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--pink),
+      #ff7ab7
+    );
+
+  cursor:pointer;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:18px;
+}
+
+.music-label{
+  font-size:13px;
+  padding-right:8px;
+  color:var(--muted);
+}
+
+.music-playing{
+  animation:musicPulse 1.2s infinite;
+}
+
+@keyframes musicPulse{
+  50%{
+    box-shadow:
+      0 0 0 7px rgba(255,95,168,.12);
+  }
+}
+
+
+/* =========================
+   OPENING
+========================= */
+
+#opening{
+  min-height:100vh;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:25px;
+
+  position:relative;
+  z-index:5;
+}
+
+.opening-card{
+  width:min(700px,100%);
+
+  text-align:center;
+
+  padding:55px 25px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.10),
+      rgba(255,255,255,.035)
+    );
+
+  border:1px solid var(--border);
+  border-radius:35px;
+
+  backdrop-filter:blur(25px);
+
+  box-shadow:
+    0 30px 100px rgba(0,0,0,.45),
+    inset 0 1px rgba(255,255,255,.08);
+
+  animation:cardAppear .9s ease;
+}
+
+@keyframes cardAppear{
+  from{
+    opacity:0;
+    transform:translateY(30px) scale(.96);
+  }
+
+  to{
+    opacity:1;
+    transform:none;
+  }
+}
+
+.opening-gift{
+  display:block;
+  font-size:90px;
+
+  animation:giftBounce 2s infinite;
+}
+
+@keyframes giftBounce{
+  50%{
+    transform:translateY(-14px) rotate(3deg);
+  }
+}
+
+.opening-card h1{
+  font-family:Georgia,serif;
+
+  font-size:
+    clamp(35px,8vw,65px);
+
+  margin:20px 0 12px;
+}
+
+.opening-card p{
+  color:var(--muted);
+
+  font-size:18px;
+  line-height:1.9;
+
+  margin-bottom:30px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.primary-button{
+  border:none;
+  color:white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ff4f9a,
+      #ff8abd
+    );
+
+  padding:14px 28px;
+
+  border-radius:999px;
+
+  cursor:pointer;
+  font-weight:bold;
+
+  box-shadow:
+    0 12px 35px rgba(255,80,155,.30);
+
+  transition:.25s;
+}
+
+.primary-button:hover{
+  transform:
+    translateY(-3px)
+    scale(1.03);
+
+  box-shadow:
+    0 15px 45px rgba(255,80,155,.45);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  min-height:100vh;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  text-align:center;
+
+  padding:120px 20px 80px;
+
+  position:relative;
+  z-index:1;
+}
+
+.hero-content{
+  max-width:900px;
+}
+
+.badge{
+  display:inline-block;
+
+  padding:8px 17px;
+
+  border-radius:999px;
+
+  border:1px solid var(--border);
+
+  color:var(--pink2);
+
+  background:rgba(255,255,255,.05);
+
+  backdrop-filter:blur(10px);
+}
+
+.hero h2{
+  font-family:Georgia,serif;
+
+  font-size:
+    clamp(45px,10vw,95px);
+
+  line-height:1;
+
+  margin:25px 0;
+}
+
+.gradient-name{
+  background:
+    linear-gradient(
+      90deg,
+      white,
+      #ff9fc8,
+      #ffd98a,
+      #c9a4ff,
+      white
+    );
+
+  background-size:300% auto;
+
+  -webkit-background-clip:text;
+  background-clip:text;
+
+  color:transparent;
+
+  animation:shine 5s linear infinite;
+}
+
+@keyframes shine{
+  to{
+    background-position:300% center;
+  }
+}
+
+.hero-description{
+  max-width:700px;
+
+  margin:auto;
+
+  color:var(--muted);
+
+  font-size:19px;
+  line-height:1.9;
+}
+
+.scroll-text{
+  margin-top:35px;
+
+  color:#a996a6;
+
+  animation:scrollDown 1.5s infinite;
+}
+
+@keyframes scrollDown{
+  50%{
+    transform:translateY(8px);
+  }
+}
+
+
+/* =========================
+   CAKE
+========================= */
+
+.cake-section{
+  display:flex;
+  justify-content:center;
+
+  margin:25px 0 10px;
+}
+
+.cake{
+  position:relative;
+
+  width:180px;
+  height:150px;
+
+  filter:
+    drop-shadow(
+      0 15px 25px
+      rgba(255,80,160,.20)
+    );
+}
+
+.cake-body{
+  position:absolute;
+
+  left:20px;
+  bottom:0;
+
+  width:140px;
+  height:75px;
+
+  border-radius:
+    12px 12px
+    20px 20px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ff8fbd,
+      #e83d83
+    );
+}
+
+.cake-body:before{
+  content:"";
+
+  position:absolute;
+
+  top:18px;
+  left:0;
+
+  width:100%;
+  height:12px;
+
+  background:#fff0f7;
+
+  border-radius:50%;
+
+  opacity:.9;
+}
+
+.cake-top{
+  position:absolute;
+
+  left:30px;
+  top:52px;
+
+  width:120px;
+  height:28px;
+
+  border-radius:50%;
+
+  background:#ffafd0;
+}
+
+.cream{
+  position:absolute;
+
+  left:35px;
+  top:67px;
+
+  width:110px;
+  height:28px;
+
+  border-radius:50%;
+
+  background:#fff5fa;
+}
+
+.candle{
+  position:absolute;
+
+  top:10px;
+
+  width:12px;
+  height:48px;
+
+  border-radius:5px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #ffd98a,
+      #ff7aaa
+    );
+}
+
+.candle:nth-child(1){
+  left:60px;
+}
+
+.candle:nth-child(2){
+  left:84px;
+}
+
+.candle:nth-child(3){
+  left:108px;
+}
+
+.flame{
+  position:absolute;
+
+  width:14px;
+  height:20px;
+
+  border-radius:50%;
+
+  background:#ffd98a;
+
+  top:-20px;
+  left:-1px;
+
+  animation:
+    flame 1s infinite alternate;
+
+  box-shadow:
+    0 0 18px #ffd98a;
+}
+
+@keyframes flame{
+  from{
+    transform:
+      scale(.9)
+      rotate(-3deg);
+  }
+
+  to{
+    transform:
+      scale(1.15)
+      rotate(3deg);
+  }
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section{
+  width:min(1050px,92%);
+
+  margin:auto;
+
+  padding:85px 0;
+
+  position:relative;
+  z-index:1;
+}
+
+.section-title{
+  text-align:center;
+
+  margin-bottom:40px;
+}
+
+.eyebrow{
+  color:var(--pink2);
+
+  font-size:13px;
+
+  letter-spacing:3px;
+}
+
+.section-title h3{
+  font-family:Georgia,serif;
+
+  font-size:
+    clamp(32px,6vw,52px);
+
+  margin:10px 0;
+}
+
+.section-title p{
+  color:var(--muted);
+
+  max-width:650px;
+
+  margin:auto;
+
+  line-height:1.8;
+}
+
+
+/* =========================
+   GLASS
+========================= */
+
+.glass-card{
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.085),
+      rgba(255,255,255,.035)
+    );
+
+  border:1px solid var(--border);
+
+  border-radius:28px;
+
+  backdrop-filter:blur(18px);
+
+  box-shadow:
+    0 20px 70px
+    rgba(0,0,0,.20);
+
+  transition:.3s;
+}
+
+.glass-card:hover{
+  border-color:
+    rgba(255,160,205,.28);
+
+  transform:translateY(-3px);
+}
+
+
+/* =========================
+   LETTER
+========================= */
+
+.letter{
+  padding:
+    clamp(25px,5vw,52px);
+}
+
+.letter p{
+  font-size:18px;
+
+  line-height:2;
+
+  margin-bottom:20px;
+
+  color:#f7eaf3;
+}
+
+.signature{
+  text-align:right;
+
+  color:var(--pink2);
+
+  font-size:18px;
+
+  margin-top:30px;
+}
+
+
+/* =========================
+   REASONS
+========================= */
+
+.reasons-grid{
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:18px;
+}
+
+.reason-card{
+  padding:27px;
+
+  background:var(--card);
+
+  border:1px solid var(--border);
+
+  border-radius:24px;
+
+  transition:.3s;
+}
+
+.reason-card:hover{
+  transform:translateY(-8px);
+
+  background:var(--card2);
+}
+
+.reason-icon{
+  font-size:38px;
+
+  margin-bottom:8px;
+}
+
+.reason-card h4{
+  margin:10px 0;
+
+  font-size:21px;
+}
+
+.reason-card p{
+  color:var(--muted);
+
+  line-height:1.8;
+}
+
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline{
+  position:relative;
+
+  max-width:800px;
+
+  margin:auto;
+}
+
+.timeline:before{
+  content:"";
+
+  position:absolute;
+
+  left:15px;
+  top:0;
+  bottom:0;
+
+  width:1px;
+
+  background:
+    linear-gradient(
+      var(--pink),
+      transparent
+    );
+}
+
+.memory{
+  position:relative;
+
+  padding-left:50px;
+
+  margin-bottom:28px;
+}
+
+.memory-dot{
+  position:absolute;
+
+  left:7px;
+  top:5px;
+
+  width:17px;
+  height:17px;
+
+  border-radius:50%;
+
+  background:var(--pink);
+
+  box-shadow:
+    0 0 0 6px
+    rgba(255,111,174,.12),
+
+    0 0 20px
+    rgba(255,111,174,.5);
+}
+
+.memory-card{
+  padding:22px;
+
+  background:var(--card);
+
+  border:1px solid var(--border);
+
+  border-radius:22px;
+}
+
+.memory-card small{
+  color:var(--pink2);
+}
+
+.memory-card h4{
+  font-size:21px;
+
+  margin:6px 0 8px;
+}
+
+.memory-card p{
+  color:var(--muted);
+
+  line-height:1.8;
+}
+
+
+/* =========================
+   PHOTOS
+========================= */
+
+.photos-grid{
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:18px;
+}
+
+.photo{
+  aspect-ratio:1/1.08;
+
+  border-radius:25px;
+
+  overflow:hidden;
+
+  border:1px solid var(--border);
+
+  cursor:pointer;
+
+  transition:.35s;
+}
+
+.photo:hover{
+  transform:
+    translateY(-7px)
+    scale(1.015);
+
+  box-shadow:
+    0 20px 50px
+    rgba(255,70,150,.13);
+}
+
+.photo img{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  display:block;
+
+  transition:.5s;
+}
+
+.photo:hover img{
+  transform:scale(1.06);
+}
+
+
+/* =========================
+   LIGHTBOX
+========================= */
+
+.lightbox{
+  position:fixed;
+  inset:0;
+
+  z-index:300;
+
+  display:none;
+
+  align-items:center;
+  justify-content:center;
+
+  padding:20px;
+
+  background:rgba(0,0,0,.88);
+
+  backdrop-filter:blur(10px);
+}
+
+.lightbox.show{
+  display:flex;
+}
+
+.lightbox img{
+  max-width:95%;
+  max-height:90vh;
+
+  border-radius:20px;
+
+  box-shadow:
+    0 20px 80px
+    rgba(0,0,0,.6);
+}
+
+.lightbox-close{
+  position:absolute;
+
+  top:20px;
+  right:25px;
+
+  width:45px;
+  height:45px;
+
+  border:0;
+
+  border-radius:50%;
+
+  background:
+    rgba(255,255,255,.12);
+
+  color:white;
+
+  font-size:25px;
+
+  cursor:pointer;
+}
+
+
+/* =====================================================
+   GAMES
+===================================================== */
+
+.games-container{
+  display:grid;
+
+  grid-template-columns:
+    repeat(2,1fr);
+
+  gap:25px;
+}
+
+
+/* GAME CARD */
+
+.game-box{
+  padding:25px;
+
+  text-align:center;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.09),
+      rgba(255,255,255,.035)
+    );
+
+  border:1px solid var(--border);
+
+  border-radius:30px;
+
+  box-shadow:
+    0 20px 70px
+    rgba(0,0,0,.18);
+
+  transition:.3s;
+}
+
+.game-box:hover{
+  transform:translateY(-4px);
+
+  border-color:
+    rgba(255,160,205,.25);
+}
+
+.game-header{
+  display:flex;
+
+  justify-content:space-between;
+  align-items:center;
+
+  gap:10px;
+
+  margin-bottom:15px;
+
+  color:var(--muted);
+
+  font-size:14px;
+}
+
+.game-message{
+  min-height:28px;
+
+  color:var(--pink2);
+
+  margin:12px 0 18px;
+}
+
+
+/* =========================
+   GAME 1 HEART
+========================= */
+
+.game-area{
+  position:relative;
+
+  height:330px;
+
+  overflow:hidden;
+
+  border-radius:22px;
+
+  border:1px solid var(--border);
+
+  background:
+    radial-gradient(
+      circle at 50% 20%,
+      rgba(255,100,170,.15),
+      transparent 40%
+    ),
+
+    rgba(0,0,0,.15);
+}
+
+.game-heart{
+  position:absolute;
+
+  border:none;
+
+  background:none;
+
+  cursor:pointer;
+
+  font-size:32px;
+
+  animation:
+    heartPop .8s ease forwards;
+}
+
+@keyframes heartPop{
+  from{
+    transform:
+      scale(.3)
+      rotate(-20deg);
+
+    opacity:0;
+  }
+
+  to{
+    transform:
+      scale(1);
+
+    opacity:1;
+  }
+}
+
+
+/* =========================
+   GAME 2 BALLOON
+========================= */
+
+.balloon-area{
+  position:relative;
+
+  height:330px;
+
+  overflow:hidden;
+
+  border-radius:22px;
+
+  border:1px solid var(--border);
+
+  background:
+    radial-gradient(
+      circle at 50% 20%,
+      rgba(181,140,255,.15),
+      transparent 45%
+    ),
+
+    rgba(0,0,0,.15);
+}
+
+.balloon{
+  position:absolute;
+
+  width:55px;
+  height:68px;
+
+  border:none;
+
+  border-radius:
+    50% 50%
+    45% 45%;
+
+  cursor:pointer;
+
+  font-size:25px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffafd0,
+      #ff5fa8
+    );
+
+  box-shadow:
+    inset -8px -10px
+    rgba(0,0,0,.12),
+
+    0 10px 25px
+    rgba(255,80,160,.20);
+
+  animation:
+    balloonFloat 2.8s ease-in-out infinite;
+}
+
+.balloon:after{
+  content:"";
+
+  position:absolute;
+
+  left:50%;
+
+  bottom:-25px;
+
+  width:1px;
+  height:27px;
+
+  background:
+    rgba(255,255,255,.45);
+}
+
+.balloon.pop{
+  animation:
+    balloonPop .3s ease forwards;
+}
+
+@keyframes balloonFloat{
+  50%{
+    transform:
+      translateY(-15px)
+      rotate(4deg);
+  }
+}
+
+@keyframes balloonPop{
+  to{
+    transform:scale(1.7);
+    opacity:0;
+  }
+}
+
+
+/* =========================
+   GAME 3 MEMORY
+========================= */
+
+.memory-game{
+  display:grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
+
+  gap:10px;
+
+  max-width:400px;
+
+  margin:auto;
+}
+
+.memory-card-game{
+  aspect-ratio:1;
+
+  border:1px solid var(--border);
+
+  border-radius:15px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,95,168,.25),
+      rgba(181,140,255,.18)
+    );
+
+  color:white;
+
+  font-size:28px;
+
+  cursor:pointer;
+
+  transition:.3s;
+
+  transform-style:preserve-3d;
+}
+
+.memory-card-game:hover{
+  transform:scale(1.04);
+}
+
+.memory-card-game.flipped{
+  background:
+    rgba(255,255,255,.12);
+}
+
+.memory-card-game.matched{
+  background:
+    rgba(255,95,168,.20);
+
+  border-color:
+    rgba(255,175,208,.5);
+
+  cursor:default;
+}
+
+
+/* =========================
+   GAME 4 GIFT
+========================= */
+
+.gift-area{
+  min-height:330px;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  gap:15px;
+
+  flex-wrap:wrap;
+
+  padding:20px;
+}
+
+.gift-box{
+  width:110px;
+  height:110px;
+
+  border:none;
+
+  border-radius:22px;
+
+  cursor:pointer;
+
+  font-size:55px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,95,168,.25),
+      rgba(181,140,255,.22)
+    );
+
+  border:1px solid var(--border);
+
+  transition:.35s;
+}
+
+.gift-box:hover{
+  transform:
+    translateY(-10px)
+    rotate(-3deg);
+
+  background:
+    rgba(255,255,255,.12);
+}
+
+.gift-box.opened{
+  transform:scale(.9);
+
+  opacity:.7;
+
+  cursor:default;
+}
+
+
+/* GAME COMPLETED */
+
+.game-complete{
+  min-height:330px;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  flex-direction:column;
+
+  gap:12px;
+
+  text-align:center;
+}
+
+.game-complete-icon{
+  font-size:65px;
+
+  animation:
+    completeBounce 1s infinite;
+}
+
+@keyframes completeBounce{
+  50%{
+    transform:
+      translateY(-10px)
+      scale(1.05);
+  }
+}
+
+
+/* =========================
+   OPEN WHEN
+========================= */
+
+.open-when-grid{
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:18px;
+}
+
+.open-card{
+  padding:25px;
+
+  text-align:center;
+
+  background:var(--card);
+
+  border:1px solid var(--border);
+
+  border-radius:24px;
+
+  cursor:pointer;
+
+  transition:.3s;
+}
+
+.open-card:hover{
+  transform:translateY(-7px);
+
+  background:var(--card2);
+}
+
+.open-card .emoji{
+  font-size:42px;
+}
+
+.open-card h4{
+  margin:12px 0 5px;
+}
+
+.open-card p{
+  color:var(--muted);
+
+  line-height:1.7;
+}
+
+
+/* =========================
+   SECRET
+========================= */
+
+.secret-section{
+  text-align:center;
+
+  padding:100px 20px;
+
+  position:relative;
+  z-index:1;
+}
+
+.secret-lock{
+  font-size:65px;
+
+  margin-bottom:20px;
+
+  animation:
+    lockFloat 2s infinite;
+}
+
+@keyframes lockFloat{
+  50%{
+    transform:
+      translateY(-8px);
+  }
+}
+
+.secret-card{
+  max-width:750px;
+
+  margin:auto;
+
+  padding:
+    clamp(30px,6vw,55px);
+
+  opacity:0;
+
+  transform:
+    scale(.92)
+    translateY(20px);
+
+  transition:.8s;
+
+  pointer-events:none;
+}
+
+.secret-card.unlocked{
+  opacity:1;
+
+  transform:none;
+
+  pointer-events:auto;
+}
+
+.secret-card h3{
+  font-family:Georgia,serif;
+
+  font-size:
+    clamp(35px,7vw,60px);
+
+  margin-bottom:20px;
+}
+
+.secret-text{
+  color:#f6e8f1;
+
+  line-height:2;
+
+  font-size:18px;
+}
+
+
+/* =========================
+   FINAL
+========================= */
+
+.final-section{
+  text-align:center;
+
+  padding:
+    110px 20px
+    90px;
+
+  position:relative;
+  z-index:1;
+}
+
+.final-section h3{
+  font-family:Georgia,serif;
+
+  font-size:
+    clamp(40px,8vw,70px);
+
+  margin-bottom:20px;
+}
+
+.final-section p{
+  max-width:700px;
+
+  margin:auto;
+
+  color:var(--muted);
+
+  font-size:18px;
+
+  line-height:1.9;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  text-align:center;
+
+  padding:30px 20px 100px;
+
+  color:#a996a6;
+
+  position:relative;
+
+  z-index:1;
+}
+
+footer span{
+  color:var(--pink2);
+}
+
+
+/* =========================
+   CONFETTI
+========================= */
+
+.confetti{
+  position:fixed;
+
+  top:-20px;
+
+  z-index:500;
+
+  pointer-events:none;
+
+  animation:
+    confettiFall
+    3s linear forwards;
+}
+
+@keyframes confettiFall{
+  to{
+    transform:
+      translateY(110vh)
+      rotate(720deg);
+
+    opacity:0;
+  }
+}
+
+
+/* =========================
+   REVEAL
+========================= */
+
+.reveal{
+  opacity:0;
+
+  transform:
+    translateY(30px);
+
+  transition:
+    1s ease;
+}
+
+.reveal.visible{
+  opacity:1;
+
+  transform:none;
+}
+
+
+/* =========================
+   TOAST
+========================= */
+
+.toast{
+  position:fixed;
+
+  left:50%;
+  bottom:85px;
+
+  transform:
+    translateX(-50%)
+    translateY(20px);
+
+  z-index:700;
+
+  max-width:
+    min(90%,500px);
+
+  padding:15px 22px;
+
+  border-radius:18px;
+
+  background:
+    rgba(25,8,35,.90);
+
+  border:1px solid var(--border);
+
+  backdrop-filter:blur(15px);
+
+  color:white;
+
+  text-align:center;
+
+  opacity:0;
+
+  pointer-events:none;
+
+  transition:.35s;
+}
+
+.toast.show{
+  opacity:1;
+
+  transform:
+    translateX(-50%)
+    translateY(0);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:850px){
+
+  .games-container{
+    grid-template-columns:1fr;
+  }
+
+}
+
+@media(max-width:760px){
+
+  .nav{
+    top:auto;
+
+    bottom:15px;
+
+    left:15px;
+    right:15px;
+
+    transform:none;
+
+    justify-content:center;
+
+    overflow-x:auto;
+  }
+
+  .nav button{
+    white-space:nowrap;
+
+    padding:8px 10px;
+  }
+
+  .music-player{
+    top:12px;
+
+    right:12px;
+
+    bottom:auto;
+  }
+
+  .music-label{
+    display:none;
+  }
+
+  .reasons-grid,
+  .photos-grid,
+  .open-when-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero{
+    padding-top:100px;
+
+    min-height:100vh;
+  }
+
+  .hero-description{
+    font-size:17px;
+  }
+
+  .letter p{
+    font-size:17px;
+  }
+
+  .game-area,
+  .balloon-area{
+    height:300px;
+  }
+
+  .memory-game{
+    gap:7px;
+  }
+
+  .memory-card-game{
+    font-size:23px;
+  }
+
+  .gift-box{
+    width:90px;
+    height:90px;
+
+    font-size:45px;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- BACKGROUND -->
+
+<div
+  class="background-hearts"
+  id="backgroundHearts">
+</div>
+
+
+<!-- MUSIC -->
+
+<audio
+  id="birthdayMusic"
+  src="birthday.mp3"
+  loop
+  preload="auto">
+</audio>
+
+
+<div class="music-player">
+
+  <button
+    class="music-button"
+    id="musicButton"
+    onclick="toggleMusic()">
+
+    🔇
+
+  </button>
+
+  <span
+    class="music-label"
+    id="musicLabel">
+
+    Music Off
+
+  </span>
+
+</div>
+
+
+<!-- NAV -->
+
+<nav
+  class="nav hidden"
+  id="nav">
+
+  <button onclick="goTo('home')">
+    🏠
+  </button>
+
+  <button onclick="goTo('letterSection')">
+    💌
+  </button>
+
+  <button onclick="goTo('memoriesSection')">
+    📸
+  </button>
+
+  <button onclick="goTo('gameSection')">
+    🎮
+  </button>
+
+  <button onclick="goTo('secretSection')">
+    🔐
+  </button>
+
+</nav>
+
+
+<!-- OPENING -->
+
+<section id="opening">
+
+  <div class="opening-card">
+
+    <span class="opening-gift">
+      🎁
+    </span>
+
+    <h1>
+      একটা ছোট্ট surprise...
+    </h1>
+
+    <p>
+      এই ছোট্ট জায়গাটা শুধু তোমার জন্য।<br>
+      দরজা খুলবে?
+    </p>
+
+    <button
+      class="primary-button"
+      onclick="startSurprise()">
+
+      খুলে দেখো ❤️
+
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- MAIN -->
+
+<main
+  id="main"
+  class="hidden">
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section
+  class="hero"
+  id="home">
+
+  <div class="hero-content reveal">
+
+    <span class="badge">
+      আজকের দিনটা শুধু তোমার জন্য 🎈
+    </span>
+
+    <h2>
+
+      শুভ জন্মদিন,
+
+      <br>
+
+      <span class="gradient-name">
+        ফাইজু
+      </span>
+
+      ❤️
+
+    </h2>
+
+    <p class="hero-description">
+
+      দূরে থেকেও আজকের এই বিশেষ দিনে আমার সব শুভকামনা শুধু তোমার জন্য। ❤️
+
+    </p>
+
+
+    <!-- CAKE -->
+
+    <div class="cake-section">
+
+      <div class="cake">
+
+        <div class="cake-top"></div>
+
+        <div class="cream"></div>
+
+        <div class="cake-body"></div>
+
+        <div class="candle">
+
+          <div class="flame"></div>
+
+        </div>
+
+        <div class="candle">
+
+          <div class="flame"></div>
+
+        </div>
+
+        <div class="candle">
+
+          <div class="flame"></div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="scroll-text">
+
+      নিচে আরও কিছু surprise আছে ↓
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     LETTER
+========================= -->
+
+<section
+  class="section reveal"
+  id="letterSection">
+
+  <div class="section-title">
+
+    <div class="eyebrow">
+      A LETTER FOR YOU
+    </div>
+
+    <h3>
+      কিছু কথা, শুধু তোমার জন্য
+    </h3>
+
+  </div>
+
+  <div
+    class="letter glass-card"
+    id="letter">
+  </div>
+
+</section>
+
+
+<!-- =========================
+     REASONS
+========================= -->
+
+<section class="section reveal">
+
+  <div class="section-title">
+
+    <div class="eyebrow">
+      WHY YOU ARE SPECIAL
+    </div>
+
+    <h3>
+      তুমি কেন এতটা special?
+    </h3>
+
+    <p>
+      কিছু অনুভূতি হয়তো এক লাইনে বলা যায় না।
+      তবুও চেষ্টা করলাম। ❤️
+    </p>
+
+  </div>
+
+  <div
+    class="reasons-grid"
+    id="reasons">
+  </div>
+
+</section>
+
+
+<!-- =========================
+     MEMORIES
+========================= -->
+
+<section
+  class="section reveal"
+  id="memoriesSection">
+
+  <div class="section-title">
+
+    <div class="eyebrow">
+      OUR LITTLE MEMORIES
+    </div>
+
+    <h3>
+      আমাদের ছোট ছোট স্মৃতি
+    </h3>
+
+    <p>
+      বড় কোনো গল্প নয়—
+      ছোট ছোট মুহূর্ত, যেগুলো মনে থেকে যায়।
+    </p>
+
+  </div>
+
+  <div
+    class="timeline"
+    id="memories">
+  </div>
+
+</section>
+
+
+<!-- =========================
+     PHOTOS
+========================= -->
+
+<section class="section reveal">
+
+  <div class="section-title">
+
+    <div class="eyebrow">
+      MOMENTS
+    </div>
+
+    <h3>
+      কিছু ছবি, কিছু অনুভূতি 📸
+    </h3>
+
+    <p>
+      ছবিতে click করলে বড় করে দেখা যাবে।
+    </p>
+
+  </div>
+
+  <div
+    class="photos-grid"
+    id="photos">
+  </div>
+
+</section>
+
+
+<!-- =========================
+     OPEN WHEN
+========================= -->
+
+<section class="section reveal">
+
+  <div class="section-title">
+
+    <div class="eyebrow">
+      OPEN WHEN...
+    </div>
+
+    <h3>
+      যখন ইচ্ছা হবে, তখন খুলবে 💌
+    </h3>
+
+    <p>
+      প্রতিটা box-এর ভেতরে তোমার জন্য আলাদা একটা কথা আছে।
+    </p>
+
+  </div>
+
+
+  <div class="open-when-grid">
+
+    <div
+      class="open-card"
+      onclick="openWhen('sad')">
+
+      <div class="emoji">
+        🌧️
+      </div>
+
+      <h4>
+        মন খারাপ হলে
+      </h4>
+
+      <p>
+        এখানে click করো
+      </p>
+
+    </div>
+
+
+    <div
+      class="open-card"
+      onclick="openWhen('smile')">
+
+      <div class="emoji">
+        😊
+      </div>
+
+      <h4>
+        হাসতে চাইলে
+      </h4>
+
+      <p>
+        একটা ছোট্ট message
+      </p>
+
+    </div>
+
+
+    <div
+      class="open-card"
+      onclick="openWhen('miss')">
+
+      <div class="emoji">
+        🌙
+      </div>
+
+      <h4>
+        আমাকে মনে পড়লে
+      </h4>
+
+      <p>
+        এটা খুলতে পারো
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     GAMES
+===================================================== -->
+
+<section
+  class="section reveal"
+  id="gameSection">
+
+  <div class="section-title">
+
+    <div class="eyebrow">
+      FOUR LITTLE GAMES
+    </div>
+
+    <h3>
+      এবার একটু খেলাও হোক 🎮
+    </h3>
+
+    <p>
+      চারটা ছোট্ট game আছে।
+      সবগুলো complete করলে একটা special secret খুলবে। ❤️
+    </p>
+
+  </div>
+
+
+  <div class="games-container">
+
+
+    <!-- =====================
+         GAME 1
+    ====================== -->
+
+    <div class="game-box">
+
+      <div class="game-header">
+
+        <span>
+          ❤️ Caught:
+          <strong id="score">
+            0
+          </strong>
+          / 10
+        </span>
+
+        <span>
+          Heart Catch
+        </span>
+
+      </div>
+
+
+      <div
+        class="game-area"
+        id="gameArea">
+      </div>
+
+
+      <div
+        class="game-message"
+        id="gameMessage">
+
+        Start চাপো এবং heart ধরো! ❤️
+
+      </div>
+
+
+      <button
+        class="primary-button"
+        id="gameButton"
+        onclick="startGame()">
+
+        Start Game 🎮
+
+      </button>
+
+    </div>
+
+
+    <!-- =====================
+         GAME 2
+    ====================== -->
+
+    <div class="game-box">
+
+      <div class="game-header">
+
+        <span>
+          🎈 Popped:
+          <strong id="balloonScore">
+            0
+          </strong>
+          / 8
+        </span>
+
+        <span>
+          Balloon Pop
+        </span>
+
+      </div>
+
+
+      <div
+        class="balloon-area"
+        id="balloonArea">
+      </div>
+
+
+      <div
+        class="game-message"
+        id="balloonMessage">
+
+        8টা balloon pop করো! 🎈
+
+      </div>
+
+
+      <button
+        class="primary-button"
+        id="balloonButton"
+        onclick="startBalloonGame()">
+
+        Start Game 🎈
+
+      </button>
+
+    </div>
+
+
+    <!-- =====================
+         GAME 3
+    ====================== -->
+
+    <div class="game-box">
+
+      <div class="game-header">
+
+        <span>
+          🧩 Matches:
+          <strong id="matchScore">
+            0
+          </strong>
+          / 6
+        </span>
+
+        <span>
+          Memory Match
+        </span>
+
+      </div>
+
+
+      <div
+        class="memory-game"
+        id="memoryGame">
+
+        <button
+          class="memory-card-game"
+          onclick="flipMemoryCard(this)">
+          ?
+        </button>
+
+        <button
+          class="memory-card-game"
+          onclick="flipMemoryCard(this)">
+          ?
+        </button>
+
+        <button
+          class="memory-card-game"
+          onclick="flipMemoryCard(this)">
+          ?
+        </button>
+
+        <button
+          class="memory-card-game"
+          onclick="flipMemoryCard(this)">
+          ?
+        </button>
+
+      </div>
+
+
+      <div
+        class="game-message"
+        id="memoryMessage">
+
+        Start চাপলে cards তৈরি হবে 🧩
+
+      </div>
+
+
+      <button
+        class="primary-button"
+        id="memoryButton"
+        onclick="startMemoryGame()">
+
+        Start Game 🧩
+
+      </button>
+
+    </div>
+
+
+    <!-- =====================
+         GAME 4
+    ====================== -->
+
+    <div class="game-box">
+
+      <div class="game-header">
+
+        <span>
+          🎁 Lucky Choice
+        </span>
+
+        <span>
+          Find Surprise
+        </span>
+
+      </div>
+
+
+      <div
+        class="gift-area"
+        id="giftArea">
+
+        <button
+          class="gift-box"
+          onclick="openGift(0)">
+          🎁
+        </button>
+
+        <button
+          class="gift-box"
+          onclick="openGift(1)">
+          🎁
+        </button>
+
+        <button
+          class="gift-box"
+          onclick="openGift(2)">
+          🎁
+        </button>
+
+      </div>
+
+
+      <div
+        class="game-message"
+        id="giftMessage">
+
+        একটা gift বেছে নাও! 🎁
+
+      </div>
+
+
+      <button
+        class="primary-button"
+        id="giftButton"
+        onclick="resetGiftGame()">
+
+        Try Your Luck 🎁
+
+      </button>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     SECRET
+========================= -->
+
+<section
+  class="secret-section"
+  id="secretSection">
+
+  <div
+    class="secret-lock"
+    id="secretLock">
+
+    🔒
+
+  </div>
+
+
+  <div class="section-title">
+
+    <div class="eyebrow">
+      SECRET MESSAGE
+    </div>
+
+    <h3>
+      আরেকটা জিনিস বাকি...
+    </h3>
+
+    <p id="secretHint">
+
+      আগে চারটা game complete করো। ❤️
+
+    </p>
+
+  </div>
+
+
+  <div
+    class="secret-card glass-card"
+    id="secretCard">
+
+    <h3>
+      🔓 শুধু তোমার জন্য
+    </h3>
+
+    <p class="secret-text">
+
+      কিছু মানুষ জীবনে আসে,
+      আর তাদের উপস্থিতি ধীরে ধীরে
+      সাধারণ দিনগুলোকে একটু সুন্দর করে তোলে।
+
+      <br><br>
+
+      তোমার জন্য আমার একটাই চাওয়া—
+      তুমি সবসময় ভালো থেকো,
+      হাসিখুশি থেকো,
+      আর নিজের স্বপ্নগুলোর জন্য
+      কখনো হাল ছেড়ো না।
+
+      <br><br>
+
+      শুভ জন্মদিন। ❤️
+
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     FINAL
+========================= -->
+
+<section class="final-section reveal">
+
+  <h3>
+    শেষে শুধু একটা কথা... ❤️
+  </h3>
+
+  <p id="finalMessage">
+  </p>
+
+  <br><br>
+
+  <button
+    class="primary-button"
+    onclick="celebrate()">
+
+    আরেকবার শুভ জন্মদিন 🎂
+
+  </button>
+
+</section>
+
+
+<footer>
+
+  Made with ❤️ especially for
+  <span>
+    ফাইজু
+  </span>
+
+</footer>
+
+
+</main>
+
+
+<!-- LIGHTBOX -->
+
+<div
+  class="lightbox"
+  id="lightbox">
+
+  <button
+    class="lightbox-close"
+    onclick="closeLightbox()">
+
+    ×
+
+  </button>
+
+  <img
+    id="lightboxImage"
+    src=""
+    alt="Memory">
+
+</div>
+
+
+<!-- TOAST -->
+
+<div
+  class="toast"
+  id="toast">
+</div>
+
+
+<script>
+
+
+/* =====================================================
+   DATA
+===================================================== */
+
+const birthdayData = {
+
+  name:"ফাইজু",
+
+  letter:[
+
+    "শুভ জন্মদিন, প্রিয় ❤️🎂",
+
+    "আজকের দিনটা আমার কাছে একটু বেশি বিশেষ, কারণ এই দিনেই তুমি পৃথিবীতে এসেছিলে। দূরত্বের কারণে আজ তোমার পাশে থেকে তোমাকে শুভেচ্ছা জানাতে পারছি না, কিন্তু বিশ্বাস করো, আমার শুভকামনা তোমার কাছ থেকে একটুও দূরে নেই। 🫶",
+
+    "তোমার জীবনের প্রতিটা দিন যেন হাসি, শান্তি আর সুন্দর মুহূর্তে ভরে ওঠে। তোমার ছোট ছোট ইচ্ছেগুলো পূরণ হোক, আর তুমি যেভাবে সুন্দর একটা ভবিষ্যৎ কল্পনা করো, সেভাবেই একদিন সেটা সত্যি হোক। ✨",
+
+    "আমাদের মাঝে যত দূরত্বই থাকুক, তোমার সাথে কাটানো প্রতিটা মুহূর্ত আর আমাদের ছোট ছোট কথাগুলো আমার কাছে অনেক মূল্যবান। হয়তো সবসময় তোমার পাশে থাকতে পারি না, কিন্তু তুমি যখনই আমাকে প্রয়োজন মনে করবে, মনে রেখো—কোথাও একজন মানুষ আছে যে সত্যিই তোমার ভালো থাকা চায়। ❤️",
+
+    "আজ তোমার দিন। তাই আজ শুধু একটা কথাই চাই—অনেক হাসো, নিজের যত্ন নাও, আর এই সুন্দর দিনটাকে মন থেকে উপভোগ করো। 🎈",
+
+    "শুভ জন্মদিন আবারও। তোমার আগামী বছরটা যেন তোমার জীবনের সবচেয়ে সুন্দর অধ্যায়গুলোর একটি হয়। 🌸❤️"
+
+  ],
+
+
+  reasons:[
+
+    {
+      icon:"🌸",
+      title:"তোমার হাসি",
+      text:"তোমার হাসির মধ্যে এমন একটা সুন্দর ব্যাপার আছে, যেটা মন ভালো করে দিতে পারে।"
+    },
+
+    {
+      icon:"🫶",
+      title:"তোমার যত্ন",
+      text:"তোমার ছোট ছোট যত্ন আর কথাগুলো অনেক সময় আমার কাছে বড় কিছু হয়ে যায়।"
+    },
+
+    {
+      icon:"🌙",
+      title:"তোমার উপস্থিতি",
+      text:"দূরে থেকেও তুমি আমার দিনের একটা সুন্দর অংশ হয়ে আছো।"
+    }
+
+  ],
+
+
+  memories:[
+
+    {
+      date:"একটা ছোট্ট শুরু",
+      title:"প্রথম কথা",
+      text:"কীভাবে শুরু হয়েছিল সেটা হয়তো সাধারণ ছিল, কিন্তু সেই শুরুটাই আজ এতটা special হয়ে গেছে।"
+    },
+
+    {
+      date:"একটা সুন্দর অনুভূতি",
+      title:"আমাদের কথাগুলো",
+      text:"কখনো দীর্ঘ কথা, কখনো মাত্র কয়েকটা message—তবুও কিছু কথার value অনেক বেশি।"
+    },
+
+    {
+      date:"আজ",
+      title:"তোমার জন্মদিন",
+      text:"আজকের দিনটা তোমার। আর আমার কাছে আজকের সবচেয়ে সুন্দর কাজ হলো তোমাকে হাসানোর চেষ্টা করা।"
+    }
+
+  ],
+
+
+  photos:[
+
+    "image/birthday_photo_1_1x1.jpg",
+
+    "image/birthday_photo_2_1x1.jpg",
+
+    "image/birthday_photo_3_1x1.jpg"
+
+  ],
+
+
+  final:
+  "জীবন আমাদের কোথায় নিয়ে যাবে জানি না। কিন্তু আজ তোমার জন্মদিনে আমার একটাই চাওয়া—তুমি ভালো থেকো, নিজের স্বপ্নগুলো পূরণ করো, আর তোমার মুখের হাসিটা যেন কখনো হারিয়ে না যায়। শুভ জন্মদিন, ফাইজু। ❤️🎂"
+
+};
+
+
+/* =====================================================
+   RENDER
+===================================================== */
+
+function renderWebsite(){
+
+  document.getElementById("letter").innerHTML =
+    birthdayData.letter
+    .map(x => `<p>${x}</p>`)
+    .join("") +
+
+    `<div class="signature">
+      — তোমার জন্য ❤️
+    </div>`;
+
+
+  document.getElementById("reasons").innerHTML =
+    birthdayData.reasons.map(r => `
+
+      <article class="reason-card">
+
+        <div class="reason-icon">
+          ${r.icon}
+        </div>
+
+        <h4>
+          ${r.title}
+        </h4>
+
+        <p>
+          ${r.text}
+        </p>
+
+      </article>
+
+    `).join("");
+
+
+  document.getElementById("memories").innerHTML =
+    birthdayData.memories.map(m => `
+
+      <article class="memory">
+
+        <span class="memory-dot"></span>
+
+        <div class="memory-card">
+
+          <small>
+            ${m.date}
+          </small>
+
+          <h4>
+            ${m.title}
+          </h4>
+
+          <p>
+            ${m.text}
+          </p>
+
+        </div>
+
+      </article>
+
+    `).join("");
+
+
+  document.getElementById("photos").innerHTML =
+    birthdayData.photos.map((photo,index) => `
+
+      <div
+        class="photo"
+        onclick="openLightbox('${photo}')">
+
+        <img
+          src="${photo}"
+          alt="Memory ${index+1}"
+          onerror="imageError(this)">
+
+      </div>
+
+    `).join("");
+
+
+  document.getElementById("finalMessage")
+    .textContent=birthdayData.final;
+
+}
+
+
+/* =====================================================
+   START SURPRISE
+===================================================== */
+
+function startSurprise(){
+
+  document
+    .getElementById("opening")
+    .classList.add("hidden");
+
+
+  document
+    .getElementById("main")
+    .classList.remove("hidden");
+
+
+  document
+    .getElementById("nav")
+    .classList.remove("hidden");
+
+
+  startMusic();
+
+
+  celebrate();
+
+
+  setTimeout(()=>{
+
+    document
+      .querySelectorAll(".reveal")
+      .forEach(x =>
+        x.classList.add("visible")
+      );
+
+  },300);
+
+}
+
+
+/* =====================================================
+   MUSIC
+===================================================== */
+
+const music =
+  document.getElementById("birthdayMusic");
+
+const musicButton =
+  document.getElementById("musicButton");
+
+const musicLabel =
+  document.getElementById("musicLabel");
+
+
+async function startMusic(){
+
+  try{
+
+    await music.play();
+
+    updateMusicUI(true);
+
+  }catch(e){
+
+    updateMusicUI(false);
+
+  }
+
+}
+
+
+function toggleMusic(){
+
+  if(music.paused){
+
+    startMusic();
+
+  }else{
+
+    music.pause();
+
+    updateMusicUI(false);
+
+  }
+
+}
+
+
+function updateMusicUI(playing){
+
+  if(playing){
+
+    musicButton.textContent="🔊";
+
+    musicLabel.textContent="Music On";
+
+    musicButton.classList.add(
+      "music-playing"
+    );
+
+  }else{
+
+    musicButton.textContent="🔇";
+
+    musicLabel.textContent="Music Off";
+
+    musicButton.classList.remove(
+      "music-playing"
+    );
+
+  }
+
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+function goTo(id){
+
+  document
+    .getElementById(id)
+    .scrollIntoView({
+      behavior:"smooth"
+    });
+
+}
+
+
+/* =====================================================
+   BACKGROUND HEARTS
+===================================================== */
+
+function createBackgroundHearts(){
+
+  const container =
+    document.getElementById(
+      "backgroundHearts"
+    );
+
+  const symbols=[
+    "♡",
+    "♥",
+    "✦",
+    "·",
+    "✧"
+  ];
+
+
+  for(let i=0;i<30;i++){
+
+    const heart =
+      document.createElement("div");
+
+    heart.className=
+      "floating-heart";
+
+    heart.textContent =
+      symbols[
+        Math.floor(
+          Math.random()*symbols.length
+        )
+      ];
+
+
+    heart.style.left =
+      Math.random()*100+"%";
+
+
+    heart.style.fontSize =
+      12+
+      Math.random()*27+
+      "px";
+
+
+    heart.style.animationDuration =
+      8+
+      Math.random()*14+
+      "s";
+
+
+    heart.style.animationDelay =
+      -Math.random()*18+
+      "s";
+
+
+    container.appendChild(heart);
+
+  }
+
+}
+
+
+/* =====================================================
+   CONFETTI
+===================================================== */
+
+function celebrate(){
+
+  const symbols=[
+    "❤",
+    "♥",
+    "✦",
+    "✨",
+    "🎉",
+    "🎀",
+    "•",
+    "🎈"
+  ];
+
+
+  for(let i=0;i<90;i++){
+
+    const c =
+      document.createElement("div");
+
+    c.className="confetti";
+
+
+    c.textContent =
+      symbols[
+        Math.floor(
+          Math.random()*symbols.length
+        )
+      ];
+
+
+    c.style.left =
+      Math.random()*100+
+      "vw";
+
+
+    c.style.fontSize =
+      10+
+      Math.random()*18+
+      "px";
+
+
+    c.style.animationDuration =
+      2+
+      Math.random()*2.5+
+      "s";
+
+
+    c.style.animationDelay =
+      Math.random()*.6+
+      "s";
+
+
+    document.body.appendChild(c);
+
+
+    setTimeout(
+      ()=>c.remove(),
+      5000
+    );
+
+  }
+
+}
+
+
+/* =====================================================
+   TOAST
+===================================================== */
+
+let toastTimer;
+
+function showToast(message){
+
+  const toast =
+    document.getElementById("toast");
+
+  toast.textContent=message;
+
+  toast.classList.add("show");
+
+  clearTimeout(toastTimer);
+
+  toastTimer=setTimeout(()=>{
+
+    toast.classList.remove("show");
+
+  },8000);
+
+}
+
+
+/* =====================================================
+   GAME STATUS
+===================================================== */
+
+let gamesCompleted={
+  heart:false,
+  balloon:false,
+  memory:false,
+  gift:false
+};
+
+
+function checkAllGames(){
+
+  const allDone =
+    Object.values(gamesCompleted)
+    .every(Boolean);
+
+
+  if(allDone){
+
+    unlockSecret();
+
+  }
+
+}
+
+
+/* =====================================================
+   GAME 1
+   CATCH HEARTS
+===================================================== */
+
+let score=0;
+let gameRunning=false;
+let gameTimer=null;
+
+
+function startGame(){
+
+  if(gameRunning)return;
+
+
+  score=0;
+
+  gameRunning=true;
+
+
+  document.getElementById("score")
+    .textContent=score;
+
+
+  document.getElementById("gameMessage")
+    .textContent=
+    "Heart ধরো! ❤️";
+
+
+  document.getElementById("gameButton")
+    .textContent=
+    "Game চলছে...";
+
+
+  const area =
+    document.getElementById(
+      "gameArea"
+    );
+
+
+  area.innerHTML="";
+
+
+  createGameHeart();
+
+
+  gameTimer =
+    setInterval(
+      createGameHeart,
+      750
+    );
+
+}
+
+
+function createGameHeart(){
+
+  if(!gameRunning)return;
+
+
+  const area =
+    document.getElementById(
+      "gameArea"
+    );
+
+
+  const heart =
+    document.createElement("button");
+
+
+  heart.className=
+    "game-heart";
+
+
+  heart.textContent =
+    Math.random()>.15
+    ?"❤️"
+    :"💗";
+
+
+  const maxX =
+    area.clientWidth-50;
+
+
+  const maxY =
+    area.clientHeight-50;
+
+
+  heart.style.left =
+    Math.max(
+      5,
+      Math.random()*maxX
+    )+"px";
+
+
+  heart.style.top =
+    Math.max(
+      5,
+      Math.random()*maxY
+    )+"px";
+
+
+  heart.onclick =
+    ()=>catchHeart(heart);
+
+
+  area.appendChild(heart);
+
+
+  setTimeout(()=>{
+
+    if(heart.parentElement)
+      heart.remove();
+
+  },1400);
+
+}
+
+
+function catchHeart(heart){
+
+  if(!gameRunning)return;
+
+
+  score++;
+
+
+  document.getElementById("score")
+    .textContent=score;
+
+
+  heart.remove();
+
+
+  if(score>=10){
+
+    finishGame();
+
+  }
+
+}
+
+
+function finishGame(){
+
+  gameRunning=false;
+
+  clearInterval(gameTimer);
+
+
+  gamesCompleted.heart=true;
+
+
+  document.getElementById("gameArea")
+    .innerHTML=`
+
+      <div class="game-complete">
+
+        <div class="game-complete-icon">
+          ❤️
+        </div>
+
+        <strong style="font-size:22px;">
+          Heart Catch Complete!
+        </strong>
+
+        <span style="color:#d8c7d4;">
+          10টা heart ধরেছো 🎉
+        </span>
+
+      </div>
+
+    `;
+
+
+  document.getElementById("gameMessage")
+    .textContent=
+    "Game 1 complete! ❤️";
+
+
+  document.getElementById("gameButton")
+    .textContent=
+    "Completed ❤️";
+
+
+  showToast(
+    "❤️ প্রথম game complete!"
+  );
+
+
+  checkAllGames();
+
+}
+
+
+/* =====================================================
+   GAME 2
+   BALLOON POP
+===================================================== */
+
+let balloonScore=0;
+let balloonRunning=false;
+let balloonTimer=null;
+
+
+function startBalloonGame(){
+
+  if(balloonRunning)return;
+
+
+  balloonScore=0;
+
+  balloonRunning=true;
+
+
+  document.getElementById(
+    "balloonScore"
+  ).textContent=0;
+
+
+  document.getElementById(
+    "balloonMessage"
+  ).textContent=
+    "Balloon pop করো! 🎈";
+
+
+  document.getElementById(
+    "balloonButton"
+  ).textContent=
+    "Game চলছে...";
+
+
+  const area =
+    document.getElementById(
+      "balloonArea"
+    );
+
+
+  area.innerHTML="";
+
+
+  createBalloon();
+
+
+  balloonTimer =
+    setInterval(
+      createBalloon,
+      800
+    );
+
+}
+
+
+function createBalloon(){
+
+  if(!balloonRunning)return;
+
+
+  const area =
+    document.getElementById(
+      "balloonArea"
+    );
+
+
+  const balloon =
+    document.createElement("button");
+
+
+  balloon.className="balloon";
+
+
+  const emojis=[
+    "🎈",
+    "💗",
+    "🎀",
+    "✨"
+  ];
+
+
+  balloon.textContent =
+    emojis[
+      Math.floor(
+        Math.random()*emojis.length
+      )
+    ];
+
+
+  const maxX =
+    area.clientWidth-65;
+
+
+  const maxY =
+    area.clientHeight-100;
+
+
+  balloon.style.left =
+    Math.max(
+      5,
+      Math.random()*maxX
+    )+"px";
+
+
+  balloon.style.top =
+    Math.max(
+      5,
+      Math.random()*maxY
+    )+"px";
+
+
+  balloon.onclick =
+    ()=>popBalloon(balloon);
+
+
+  area.appendChild(balloon);
+
+
+  setTimeout(()=>{
+
+    if(balloon.parentElement)
+      balloon.remove();
+
+  },2500);
+
+}
+
+
+function popBalloon(balloon){
+
+  if(!balloonRunning)return;
+
+
+  balloonScore++;
+
+
+  document.getElementById(
+    "balloonScore"
+  ).textContent=
+    balloonScore;
+
+
+  balloon.classList.add("pop");
+
+
+  setTimeout(
+    ()=>balloon.remove(),
+    300
+  );
+
+
+  if(balloonScore>=8){
+
+    finishBalloonGame();
+
+  }
+
+}
+
+
+function finishBalloonGame(){
+
+  balloonRunning=false;
+
+  clearInterval(balloonTimer);
+
+
+  gamesCompleted.balloon=true;
+
+
+  document.getElementById(
+    "balloonArea"
+  ).innerHTML=`
+
+    <div class="game-complete">
+
+      <div class="game-complete-icon">
+        🎈
+      </div>
+
+      <strong style="font-size:22px;">
+        Balloon Master!
+      </strong>
+
+      <span style="color:#d8c7d4;">
+        8টা balloon pop করেছো 🎉
+      </span>
+
+    </div>
+
+  `;
+
+
+  document.getElementById(
+    "balloonMessage"
+  ).textContent=
+    "Game 2 complete! 🎈";
+
+
+  document.getElementById(
+    "balloonButton"
+  ).textContent=
+    "Completed 🎈";
+
+
+  showToast(
+    "🎈 দ্বিতীয় game complete!"
+  );
+
+
+  checkAllGames();
+
+}
+
+
+/* =====================================================
+   GAME 3
+   MEMORY MATCH
+===================================================== */
+
+const memorySymbols=[
+  "❤️",
+  "🎂",
+  "🎈",
+  "🌸",
+  "🎁",
+  "✨"
+];
+
+
+let memoryCards=[];
+let firstCard=null;
+let secondCard=null;
+let memoryLocked=false;
+let memoryMatches=0;
+
+
+function startMemoryGame(){
+
+  memoryCards=[];
+  firstCard=null;
+  secondCard=null;
+  memoryLocked=false;
+  memoryMatches=0;
+
+
+  gamesCompleted.memory=false;
+
+
+  document.getElementById(
+    "matchScore"
+  ).textContent=0;
+
+
+  document.getElementById(
+    "memoryMessage"
+  ).textContent=
+    "একই symbol-এর pair খুঁজে বের করো 🧩";
+
+
+  document.getElementById(
+    "memoryButton"
+  ).textContent=
+    "Game চলছে...";
+
+
+  const symbols =
+    [
+      ...memorySymbols,
+      ...memorySymbols
+    ];
+
+
+  symbols.sort(
+    ()=>Math.random()-.5
+  );
+
+
+  const area =
+    document.getElementById(
+      "memoryGame"
+    );
+
+
+  area.innerHTML="";
+
+
+  symbols.forEach((symbol,index)=>{
+
+    const card =
+      document.createElement("button");
+
+
+    card.className=
+      "memory-card-game";
+
+
+    card.dataset.symbol=
+      symbol;
+
+
+    card.dataset.index=
+      index;
+
+
+    card.textContent="❓";
+
+
+    card.onclick=
+      ()=>flipMemoryCard(card);
+
+
+    area.appendChild(card);
+
+
+    memoryCards.push(card);
+
+  });
+
+}
+
+
+function flipMemoryCard(card){
+
+  if(
+    memoryLocked ||
+    card.classList.contains("flipped") ||
+    card.classList.contains("matched")
+  ){
+
+    return;
+
+  }
+
+
+  card.classList.add("flipped");
+
+  card.textContent=
+    card.dataset.symbol;
+
+
+  if(!firstCard){
+
+    firstCard=card;
+
+    return;
+
+  }
+
+
+  secondCard=card;
+
+  memoryLocked=true;
+
+
+  if(
+    firstCard.dataset.symbol ===
+    secondCard.dataset.symbol
+  ){
+
+    firstCard.classList.add(
+      "matched"
+    );
+
+    secondCard.classList.add(
+      "matched"
+    );
+
+
+    memoryMatches++;
+
+
+    document.getElementById(
+      "matchScore"
+    ).textContent=
+      memoryMatches;
+
+
+    firstCard=null;
+    secondCard=null;
+
+    memoryLocked=false;
+
+
+    if(memoryMatches>=6){
+
+      finishMemoryGame();
+
+    }
+
+  }else{
+
+    setTimeout(()=>{
+
+      firstCard.classList.remove(
+        "flipped"
+      );
+
+      secondCard.classList.remove(
+        "flipped"
+      );
+
+
+      firstCard.textContent="❓";
+
+      secondCard.textContent="❓";
+
+
+      firstCard=null;
+      secondCard=null;
+
+      memoryLocked=false;
+
+    },700);
+
+  }
+
+}
+
+
+function finishMemoryGame(){
+
+  gamesCompleted.memory=true;
+
+
+  document.getElementById(
+    "memoryMessage"
+  ).textContent=
+    "Game 3 complete! 🧩";
+
+
+  document.getElementById(
+    "memoryButton"
+  ).textContent=
+    "Completed 🧩";
+
+
+  showToast(
+    "🧩 তৃতীয় game complete!"
+  );
+
+
+  celebrate();
+
+
+  checkAllGames();
+
+}
+
+
+/* =====================================================
+   GAME 4
+   LUCKY GIFT
+===================================================== */
+
+let luckyGift =
+  Math.floor(
+    Math.random()*3
+  );
+
+
+function resetGiftGame(){
+
+  luckyGift =
+    Math.floor(
+      Math.random()*3
+    );
+
+
+  gamesCompleted.gift=false;
+
+
+  const area =
+    document.getElementById(
+      "giftArea"
+    );
+
+
+  area.innerHTML="";
+
+
+  for(let i=0;i<3;i++){
+
+    const gift =
+      document.createElement("button");
+
+
+    gift.className=
+      "gift-box";
+
+
+    gift.textContent="🎁";
+
+
+    gift.onclick=
+      ()=>openGift(i);
+
+
+    area.appendChild(gift);
+
+  }
+
+
+  document.getElementById(
+    "giftMessage"
+  ).textContent=
+    "একটা gift বেছে নাও! 🎁";
+
+
+  document.getElementById(
+    "giftButton"
+  ).textContent=
+    "Try Your Luck 🎁";
+
+}
+
+
+function openGift(index){
+
+  if(gamesCompleted.gift)return;
+
+
+  const gifts =
+    document.querySelectorAll(
+      ".gift-box"
+    );
+
+
+  gifts.forEach(g=>{
+    g.disabled=true;
+  });
+
+
+  if(index===luckyGift){
+
+    gifts[index].textContent="🎉";
+
+    gifts[index].classList.add(
+      "opened"
+    );
+
+
+    gamesCompleted.gift=true;
+
+
+    document.getElementById(
+      "giftMessage"
+    ).textContent=
+      "তুমি lucky! Surprise পেয়ে গেছো! 🎉";
+
+
+    document.getElementById(
+      "giftButton"
+    ).textContent=
+      "Completed 🎁";
+
+
+    showToast(
+      "🎁 Lucky Gift পেয়েছো!"
+    );
+
+
+    celebrate();
+
+
+    checkAllGames();
+
+  }else{
+
+    gifts[index].textContent="😅";
+
+    gifts[index].classList.add(
+      "opened"
+    );
+
+
+    document.getElementById(
+      "giftMessage"
+    ).textContent=
+      "এইটা না 😅 আবার চেষ্টা করো!";
+
+
+    gifts.forEach(g=>{
+      g.disabled=false;
+    });
+
+
+    showToast(
+      "😅 এটা ছিল না! আবার চেষ্টা করো।"
+    );
+
+  }
+
+}
+
+
+/* =====================================================
+   SECRET UNLOCK
+===================================================== */
+
+function unlockSecret(){
+
+  if(
+    document
+      .getElementById("secretCard")
+      .classList
+      .contains("unlocked")
+  ){
+
+    return;
+
+  }
+
+
+  document.getElementById(
+    "secretLock"
+  ).textContent="🔓";
+
+
+  document.getElementById(
+    "secretHint"
+  ).textContent=
+    "তুমি সবগুলো game complete করে secret message unlock করে ফেলেছো। ❤️";
+
+
+  document.getElementById(
+    "secretCard"
+  ).classList.add(
+    "unlocked"
+  );
+
+
+  celebrate();
+
+
+  showToast(
+    "🔓 সবগুলো game complete! Secret unlocked!"
+  );
+
+
+  setTimeout(()=>{
+
+    document
+      .getElementById("secretSection")
+      .scrollIntoView({
+        behavior:"smooth",
+        block:"center"
+      });
+
+  },900);
+
+}
+
+
+/* =====================================================
+   OPEN WHEN
+===================================================== */
+
+function openWhen(type){
+
+  let title="";
+  let message="";
+
+
+  if(type==="sad"){
+
+    title="🌧️ মন খারাপ হলে";
+
+
+    message=
+      "সব দিন একরকম যায় না। কিছু দিন কঠিন হবে, কিছু দিন সুন্দর হবে। কিন্তু মনে রেখো—খারাপ একটা দিন মানেই খারাপ একটা জীবন নয়। নিজের প্রতি একটু নরম থেকো। ❤️";
+
+  }
+
+
+  if(type==="smile"){
+
+    title="😊 হাসতে চাইলে";
+
+
+    message=
+      "আজ তোমার birthday, তাই একটা simple rule—আজকে যতবার পারো হাসবে। কারণ তোমার হাসিটা আজকের page-এর সবচেয়ে important part। 😌❤️";
+
+  }
+
+
+  if(type==="miss"){
+
+    title="🌙 আমাকে মনে পড়লে";
+
+
+    message=
+      "দূরত্ব থাকলেও কিছু মানুষকে মনে করার জন্য কোনো special reason লাগে না। কখনো কখনো একটা ছোট্ট কথা, একটা গান, কিংবা রাতের আকাশই যথেষ্ট। 🌙❤️";
+
+  }
+
+
+  showToast(
+    title+
+    " — "+
+    message
+  );
+
+}
+
+
+/* =====================================================
+   LIGHTBOX
+===================================================== */
+
+function openLightbox(src){
+
+  document.getElementById(
+    "lightboxImage"
+  ).src=src;
+
+
+  document.getElementById(
+    "lightbox"
+  ).classList.add("show");
+
+}
+
+
+function closeLightbox(){
+
+  document.getElementById(
+    "lightbox"
+  ).classList.remove("show");
+
+}
+
+
+document
+  .getElementById("lightbox")
+  .addEventListener(
+    "click",
+    function(e){
+
+      if(e.target===this){
+
+        closeLightbox();
+
+      }
+
+    }
+  );
+
+
+/* ESC CLOSE */
+
+document.addEventListener(
+  "keydown",
+  function(e){
+
+    if(e.key==="Escape"){
+
+      closeLightbox();
+
+    }
+
+  }
+);
+
+
+/* =====================================================
+   IMAGE ERROR
+===================================================== */
+
+function imageError(image){
+
+  image.parentElement.innerHTML=`
+
+    <div style="
+      height:100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-direction:column;
+      color:#d8c7d4;
+      text-align:center;
+    ">
+
+      <div style="font-size:45px;">
+        📷
+      </div>
+
+      <p>
+        ছবিটি পাওয়া যায়নি
+      </p>
+
+    </div>
+
+  `;
+
+}
+
+
+/* =====================================================
+   SCROLL REVEAL
+===================================================== */
+
+const observer =
+  new IntersectionObserver(
+    entries=>{
+
+      entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+
+          entry.target
+            .classList
+            .add("visible");
+
+        }
+
+      });
+
+    },
+    {
+      threshold:.12
+    }
+  );
+
+
+document
+  .querySelectorAll(".reveal")
+  .forEach(
+    el=>observer.observe(el)
+  );
+
+
+/* =====================================================
+   INITIALIZE
+===================================================== */
+
+createBackgroundHearts();
+
+renderWebsite();
+
+resetGiftGame();
+
+</script>
+
+</body>
+</html>
